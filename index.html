@@ -5,50 +5,91 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Converter</title>
 </head>
 <body>
   <header class="header">
-    <div class="container-md header-container">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <div class="container-md">
           <a href="#"><img src="img/convert-logo-black-transparent (1).png" width="150" height="30" alt="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class=" justify-content-end collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-              <li class="nav-item">
+              <li class="nav-item me-3">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="#">Currencies</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="#">Media</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
+              <li class="nav-item me-3">
+                <a class="nav-link" href="#">Documents</a>
+              </li>
+              <li class="nav-item dropdown d-flex align-items-center">
+                Popular:
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    USD/UZS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item active" href="#">USD/UZS</a></li>
+                  <li><a class="dropdown-item " href="#">RUB/UZS</a></li>
+                  <li><a class="dropdown-item " href="#">EUR/UZS</a></li>
                 </ul>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    </div>
   </header>
 
+  <main>
+      <div class="hero vh-100">
+        <div class="container-md">
+          <div class="row  vh-100">
+            <div class="d-flex flex-column flex-sm-row">
+            <div class="col-12 col-sm-6 gx-0 px-2">
+              <h2 class="text-white text-center">1 <span class="fw-light fs-6">United States Dollar</span> = 11348 <span class="fw-light fs-6">Uzbekistan So'm</span>  </h2>
+              <form class="bg-light w-100  rounded-2 px-2 py-5  align-items-center" action="https://echo.htmlacademy.ru" method="post">
+                <div class="d-flex flex-column  flex-grow-1 justify-content-between flex-sm-row align-items-center">
+                  <label class="label-form w-75" id="label1" for="val1">
+                    <p class="h3" id="val1"></p>
+                    <input class="form-control" placeholder="0" type="text" id="input1">
+                  </label>
+                  <button class=" btn btn-success mx-3 align-self-center align-self-sm-end px-5 px-sm-3 mt-2" id="changebtn" type="button">
+                    <svg width="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white"><path d="M32 176h370.8l-57.38 57.38c-12.5 12.5-12.5 32.75 0 45.25C351.6 284.9 359.8 288 368 288s16.38-3.125 22.62-9.375l112-112c12.5-12.5 12.5-32.75 0-45.25l-112-112c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L402.8 112H32c-17.69 0-32 14.31-32 32S14.31 176 32 176zM480 336H109.3l57.38-57.38c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0l-112 112c-12.5 12.5-12.5 32.75 0 45.25l112 112C127.6 508.9 135.8 512 144 512s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L109.3 400H480c17.69 0 32-14.31 32-32S497.7 336 480 336z"></path></svg>
+                  </button>
+                  <label class="label-form w-75" id="label2" for="val2">
+                    <p class="h3 text-info" id="val2"></p>
+                    <input class="form-control" placeholder="0" type="text" id="input2">
+                  </label>
+                </div>
+                <button class="form-convert px-5 py-2 rounded-pill btn btn-primary mt-5" type="submit">Convert</button>
+              </form>
+            </div>
+            <div class="col col-sm-6  gx-0  px-2">
+              <h2 class="text-white text-center">1 <span class="fw-light fs-6">Uzbekistan So'm</span> = 0.00008<span class="fw-light fs-6">United States Dollar</span>  </h2>
+              <div class="  pb-5 px-3 bg-light">
+                <div class="d-flex py-3 mb-3 justify-content-between">
+                  <h2 class="h2 m-0 text-primary">History</h2>
+                  <button id="clear-btn" class="btn btn-success px-5 rounded-pill text-white">Clear</button>
+                </div>
 
-  <div class="container-md">
+                <ol ></ol>
 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
+  </main>
+
+
 
   <script src="js/script.js"></script>
   <script src="js/bootstrap.bundle.js"></script>
