@@ -9,7 +9,7 @@ var elList = document.querySelector("ol");
 elLabel1.textContent = "$USD";
 elLabel2.textContent = "UZS";
 usdValue = 11348;
-
+elCur2.disabled =true;
 elExchangeBtn.addEventListener("click", (e) => {
   elCur1.value = "";
   elCur2.value = "";
@@ -49,7 +49,7 @@ if(elLabel1.textContent == "$USD"){
   newP.textContent = `${elCur1.value} so'm => ${elCur2.value}$`;
   newP.style.color = "green"
 }
-if(elLabel1.value == ""){
+if(elCur1.value == ""){
   newP.textContent = ""
 }
 newLi.append(newP);
@@ -57,8 +57,6 @@ elList.append(newLi);
 })
 
 
-
-
-clearBtn.addEventListener("click", (evt) => {
-  newLi.newP = ""
+elClearBtn.addEventListener("click", (evt) => {
+  elList.innerHTML = ""
 })
